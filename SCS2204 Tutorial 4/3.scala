@@ -1,17 +1,17 @@
 def main(args:Array[String]):Unit={
-    println(formatNames("Benny",ChangeUpper(_)))
-    println(formatNames("Niroshan".substring(0,2), ChangeUpper(_))+formatNames("Niroshan".substring(2),ChangeLower(_)))
-    println(formatNames("Saman",ChangeLower(_)))
-    println(formatNames("Kumara".substring(0,1), ChangeUpper(_))+formatNames("Kumara".substring(1,5),ChangeLower(_)) +formatNames("Kumara".substring(5),ChangeUpper(_)))
+    println(formatNames("Benny",toUpper(_)))
+    println(formatNames("Niroshan".substring(0,2), toUpper(_))+formatNames("Niroshan".substring(2),toLower(_)))
+    println(formatNames("Saman",toLower(_)))
+    println(formatNames("Kumara".substring(0,1), toUpper(_))+formatNames("Kumara".substring(1,5),toLower(_)) +formatNames("Kumara".substring(5),toUpper(_)))
 
 }
 
-def ChangeUpper(s: String):String ={
-    s.ChangeUpperCase()
+def toUpper(s: String):String ={
+    s.toUpperCase()
 }
 
-def ChangeLower(s: String):String ={
-    s.ChangeLowerCase()
+def toLower(s: String):String ={
+    s.toLowerCase()
 }
 
 def formatNames(name:String, func:String => String):String={
